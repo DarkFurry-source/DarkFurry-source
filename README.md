@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on ... nothing
 - 📫 How to reach me ... here per github
 - 😄 Pronouns: ... normal man
-- ⚡ Fun fact: ... i am Femboy Furry
+- ⚡ Fun fact: ... coding is ass
 
 <!---
 DarkFurry-source/DarkFurry-source is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
