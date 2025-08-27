@@ -1,0 +1,23 @@
+Module
+  name: wod
+  description: Wheel of Destiny (client UI + mechanics)
+  author: Joel
+  website: https://github.com/mehah/otclient
+  reloadable: true
+  sandboxed: true
+  dependencies: [ game_interface ]
+
+  @onLoad: |
+    g_logger.info('[wod] onLoad')
+    -- UI laden (OTUI liegt neben der otmod)
+    g_ui.importStyle 'wod.otui'
+    -- Logik laden
+    dofile 'wod.lua'
+    -- Initialisieren (zeigt das Fenster im Testmodus)
+    if wod and wod.init then wod.init() end
+
+  @onUnload: |
+    if wod and wod.terminate then
+      wod.terminate()
+    end
+    wod = nil

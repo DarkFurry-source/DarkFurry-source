@@ -1,0 +1,95 @@
+MainWindow
+  id: wodWindow
+  size: 860 560
+  visible: false
+
+  Panel
+    id: leftPanel
+    size: 240 560
+    anchors.top: parent.top
+    anchors.left: parent.left
+    layout: verticalBox
+    margin-left: 10
+    margin-top: 10
+
+    Label
+      id: titleLabel
+      text: "Wheel of Destiny"
+      font: verdana-14px-bold
+
+    Label
+      id: pointsLabel
+      text: "Promotion Points: 0"
+
+    ProgressBar
+      id: revelationProgress
+      size: 210 14
+      text: ""
+
+    Label
+      id: revelationLabel
+      text: "Stage 0/3 (0/1000)"
+
+    Button
+      id: resetButton
+      text: "Reset Points"
+      enabled: false
+
+    Panel
+      id: gemsPanel
+      size: 210 180
+      layout: verticalBox
+
+    Spacer
+      size: 210 6
+
+    ScrollablePanel
+      id: logScroll
+      size: 210 240
+      layout: verticalBox
+
+      Panel
+        id: logList
+        layout: verticalBox
+        fit-children: true
+
+  Panel
+    id: wheelArea
+    size: 600 560
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-right: 10
+    layout: anchor
+
+    UIWidget
+      id: wheelBase
+      size: 520 520
+      anchors.top: parent.top
+      anchors.horizontalCenter: parent.horizontalCenter
+      margin-top: 20
+      image-source: /modules/wod/images/icon.png
+
+    Panel
+      id: sliceLayer
+      size: 520 520
+      anchors.top: wheelBase.top
+      anchors.left: wheelBase.left
+      layout: anchor
+
+    UIWidget
+      id: highlight
+      size: 520 520
+      anchors.top: wheelBase.top
+      anchors.left: wheelBase.left
+      visible: false
+      opacity: 0.9
+
+  UIWidget
+    id: wodHudIcon
+    size: 32 32
+    anchors.top: parent.top
+    anchors.right: parent.right
+    margin-top: 50
+    margin-right: 50
+    image-source: /modules/wod/images/icon.png
+    visible: false
